@@ -1,14 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import Card from "./components/card"
+
+const cards = [1, 2, 3]
 
 function App() {
-
   return (
     <>
-      <div>
-        <h1>TODO</h1>
+      <div className="mt-6 ml-4 flex gap-2">
+      {
+        cards.map((index)=>(
+            <Card key={index}/>
+        ))
+      }
       </div>
     </>
     
